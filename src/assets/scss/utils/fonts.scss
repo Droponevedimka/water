@@ -1,0 +1,36 @@
+// Fonts here
+// see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
+@font-face {
+    font-family: CastoCyrillic-Bold;
+    src: url('/assets/fonts/CastoCyrillic/CastoCyrillic-Bold.ttf'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/CastoCyrillic/CastoCyrillic-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+         //  url('/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: Typesauce;
+    src: url('/assets/fonts/Typesauce/typesauce.ttf'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/Typesauce/typesauce.ttf')  format('truetype'), /* Safari, Android, iOS */
+         //  url('/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: Airfool;
+    src: url('/assets/fonts/Airfool/Airfool.ttf'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/Airfool/Airfool.ttf')  format('truetype'), /* Safari, Android, iOS */
+         //  url('/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: CastoCyrillic-Light;
+    src: url('/assets/fonts/CastoCyrillic/CastoCyrillic-Light.ttf'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/CastoCyrillic/CastoCyrillic-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+         //  url('/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: CastoCyrillic-Regular;
+    src: url('/assets/fonts/CastoCyrillic/CastoCyrillic-Regular.ttf'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/CastoCyrillic/CastoCyrillic-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+         //  url('/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.svg') format('svg'); /* Legacy iOS */
+}
