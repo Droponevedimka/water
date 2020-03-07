@@ -1,63 +1,66 @@
 <template lang="html">
-    <form id="fform" class="formK" @submit="validate" methods="GET">
-        <div class="svgContainer">
-            <div>
-                <svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
-                    <defs>
-                        <circle id="armMaskPath" cx="100" cy="100" r="100"/>
-                    </defs>
-                    <clipPath id="armMask">
-                        <use xlink:href="#armMaskPath" overflow="visible"/>
-                    </clipPath>
-                    
-                    <g class="body">
-                        <path fill="rgba(40, 110, 252, 0.4)" class="st0" d="M103.5,1.5c24.2,16.4,38.8,34.3,47,46c14.4,20.6,37.2,53.2,26,86c-6,17.7-19.2,27.5-24,31
-                            c-24.7,17.9-64.8,22.2-90,0c-20.4-17.9-21-43.8-21-47c-0.3-30.3,21.1-48.6,24-51c8-6.3,21.1-18.5,30-38
-                            C100.1,18.3,102.4,8.9,103.5,1.5z"/>
-                        <g>
-                            <path class="st1" d="M151,101.9c-1.9,4.2-5.1,13.1-3.9,23.5c0.5,4.3,1.6,7.5,1.9,8.3c2.1,6.1,5.3,10.1,7.3,12.3"/>
-                            <path class="st2" d="M151,101.9c-1.9,4.2-5.1,13.1-3.9,23.5c0.5,4.3,1.6,7.5,1.9,8.3c2.1,6.1,5.3,10.1,7.3,12.3"/>
-                        </g>
-                        <path fill="#ffffff" class="st0" d="M60.3,84.5c-2.3,3.2-10.9,15.9-10.8,35c0,20.8,10.3,34.2,12.5,37L60.3,84.5z"/>
-                        <path fill="rgba(40, 110, 252, 0.8)" class="st0" d="M118.5,169.5c0.7-0.9,1.9-1.3,3-1c1.5,0.4,2,1.9,2,2c-1.4,2.8-2.8,6.2-4,10c-2.3,7.3-2.9,13.9-3,19
-                            c-3.1,0-6.2,0-9.2,0c-3.6,0-7.2,0-10.8,0c0.3-0.4,4.4-6.3,10.8-5.9c2.4,0.2,4.2,1.1,5.2,1.9c0.2-5,0.9-11.2,3-18
-                            C116.4,174.6,117.4,171.9,118.5,169.5z"/>
-                        <path fill="rgba(40, 110, 252, 0.4)" class="st0" d="M81.5,175.5c0.9,0.2,1.9,0.5,3,1c0.7,0.3,1.4,0.7,2,1c-0.3,1-0.7,2-1,3c-2.1,6.8-2.9,13.3-3,19
-                            c-3.1,0-6.2,0-9.2,0c-3.6,0-7.2,0-10.8,0c0.3-0.4,4.4-6.3,10.8-5.9c2.4,0.2,4.2,1.1,5.2,1.9c0.1-3.3,0.3-7,1-11
-                            C80,181.2,80.7,178.2,81.5,175.5z"/>
-                    </g>                   
-
-                    
-                    <g class="eyeL">
+   
+        <form id="fform" class="formK" @submit="validate" methods="GET">
+            <div class="svgContainer" ref="svg">
+                <div>
+                    <svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+                        <defs>
+                            <circle id="armMaskPath" cx="100" cy="100" r="100"/>
+                        </defs>
+                        <clipPath id="armMask">
+                            <use xlink:href="#armMaskPath" overflow="visible"/>
+                        </clipPath>
                         
-                        <path class="st0" d="M89.9,77.8c3.1,0,6.3,0,9.4,0c0.1-3.2-2.7-5.6-5.3-5.3C91.7,72.7,89.8,75,89.9,77.8z"/>
-                        <circle cx="93" cy="74" r="1" fill="#fff"/>
-                    </g>
-                    <g class="eyeR">
-                        <path class="st0" d="M120.9,77.8c3.1,0,6.3,0,9.4,0c0.1-3.2-2.7-5.6-5.3-5.3C122.7,72.7,120.8,75,120.9,77.8z"/>
-                        <circle cx="124" cy="74" r="1" fill="#fff"/>
-                    </g>
-                    <g class="mouth">
-                        <path class="st3" d="M103.5,92.5c0.3,0,0.7,0,1,0c4.3,0,8.7,0,13,0"/>
-                        <path class="tongue" fill="#ffa6c8" d="M106,93.5c0,1.5,0,3.1,0,4.6c0.3,2.2,2.3,3.9,4.5,3.9s4.2-1.7,4.5-3.9c0-1.5,0-3.1,0-4.6
-                            C112,93.5,109,93.5,106,93.5z"/>
-                    </g>
-                    
-                    
-                </svg>
+                        <g class="body">
+                            <path fill="rgba(40, 110, 252, 0.4)" class="st0" d="M103.5,1.5c24.2,16.4,38.8,34.3,47,46c14.4,20.6,37.2,53.2,26,86c-6,17.7-19.2,27.5-24,31
+                                c-24.7,17.9-64.8,22.2-90,0c-20.4-17.9-21-43.8-21-47c-0.3-30.3,21.1-48.6,24-51c8-6.3,21.1-18.5,30-38
+                                C100.1,18.3,102.4,8.9,103.5,1.5z"/>
+                            <g>
+                                <path class="st1" d="M151,101.9c-1.9,4.2-5.1,13.1-3.9,23.5c0.5,4.3,1.6,7.5,1.9,8.3c2.1,6.1,5.3,10.1,7.3,12.3"/>
+                                <path class="st2" d="M151,101.9c-1.9,4.2-5.1,13.1-3.9,23.5c0.5,4.3,1.6,7.5,1.9,8.3c2.1,6.1,5.3,10.1,7.3,12.3"/>
+                            </g>
+                            <path fill="#ffffff" class="st0" d="M60.3,84.5c-2.3,3.2-10.9,15.9-10.8,35c0,20.8,10.3,34.2,12.5,37L60.3,84.5z"/>
+                            <path fill="rgba(40, 110, 252, 0.8)" class="st0" d="M118.5,169.5c0.7-0.9,1.9-1.3,3-1c1.5,0.4,2,1.9,2,2c-1.4,2.8-2.8,6.2-4,10c-2.3,7.3-2.9,13.9-3,19
+                                c-3.1,0-6.2,0-9.2,0c-3.6,0-7.2,0-10.8,0c0.3-0.4,4.4-6.3,10.8-5.9c2.4,0.2,4.2,1.1,5.2,1.9c0.2-5,0.9-11.2,3-18
+                                C116.4,174.6,117.4,171.9,118.5,169.5z"/>
+                            <path fill="rgba(40, 110, 252, 0.4)" class="st0" d="M81.5,175.5c0.9,0.2,1.9,0.5,3,1c0.7,0.3,1.4,0.7,2,1c-0.3,1-0.7,2-1,3c-2.1,6.8-2.9,13.3-3,19
+                                c-3.1,0-6.2,0-9.2,0c-3.6,0-7.2,0-10.8,0c0.3-0.4,4.4-6.3,10.8-5.9c2.4,0.2,4.2,1.1,5.2,1.9c0.1-3.3,0.3-7,1-11
+                                C80,181.2,80.7,178.2,81.5,175.5z"/>
+                        </g>                   
+
+                        
+                        <g class="eyeL">
+                            
+                            <path class="st0" d="M89.9,77.8c3.1,0,6.3,0,9.4,0c0.1-3.2-2.7-5.6-5.3-5.3C91.7,72.7,89.8,75,89.9,77.8z"/>
+                            <circle cx="93" cy="74" r="1" fill="#fff"/>
+                        </g>
+                        <g class="eyeR">
+                            <path class="st0" d="M120.9,77.8c3.1,0,6.3,0,9.4,0c0.1-3.2-2.7-5.6-5.3-5.3C122.7,72.7,120.8,75,120.9,77.8z"/>
+                            <circle cx="124" cy="74" r="1" fill="#fff"/>
+                        </g>
+                        <g class="mouth">
+                            <path class="st3" d="M103.5,92.5c0.3,0,0.7,0,1,0c4.3,0,8.7,0,13,0"/>
+                            <path class="tongue" fill="#ffa6c8" d="M106,93.5c0,1.5,0,3.1,0,4.6c0.3,2.2,2.3,3.9,4.5,3.9s4.2-1.7,4.5-3.9c0-1.5,0-3.1,0-4.6
+                                C112,93.5,109,93.5,106,93.5z"/>
+                        </g>
+                        
+                        
+                    </svg>
+                </div>
             </div>
-        </div>
-        
-        <div class="inputGroup inputGroup1">
-            <label >Телефон:</label>
-            <TheMask id="phone" ref="phone" class="phone" :mask="'+7 (###) ###-##-##'" required />
-            <p class="helper helper1">ваш номер</p>
-            <span class="indicator"></span>
-        </div>               
-        <div class="inputGroup inputGroup3">
-            <button  id="login">Заказать</button>
-        </div>	
-    </form>
+            
+            <div ref="inputsOne" class="inputGroup inputGroup1">
+                <label >Телефон:</label>
+                <TheMask id="phone" ref="phone" class="phone" :mask="'+7 (###) ###-##-##'" required />
+                <p class="helper helper1">ваш номер</p>
+                <span class="indicator"></span>
+            </div>               
+            <div ref="inputsTwo" class="inputGroup inputGroup3">
+                <button  id="login">Заказать</button>
+            </div>	
+            <div ref="resultModal" class="resultModal"><span ref="resultSpan">Заказ оформлен.</span><br>Скоро с Вами свяжется наш оператор. </div>
+        </form>  
+    
 </template>
 
 <script>
@@ -80,12 +83,12 @@ export default {
       validate(e) {     
           e.preventDefault();       
             var Phone = this.$refs.phone;
-            var Name = this.$refs.name || 'Неизвестный';                    
+            var Name = this.$refs.name || ' ';                    
 
             if (this.validatePhone(Phone.lastValue)) {
                 dataLayer.push({'event': 'click-form'});
 
-                axios.get('msg/index.php?name='+Name+'&phone='+Phone)
+                axios.get('msg/index.php?name='+Name+'&phone='+Phone.lastValue)
                     .then( res => {
                         console.log('удача ' + resul);
                         dataLayer.push({'event': 'click-form-correct'});
@@ -95,7 +98,11 @@ export default {
                         dataLayer.push({'event': 'click-form-in-correct'});
                     })
                 
-                document.getElementById('modal').style.display = 'flex';
+                this.$refs.inputsOne.style.display = 'none';
+                this.$refs.inputsTwo.style.display = 'none';
+                this.$refs.svg.style.display = 'none';
+                this.$refs.resultModal.style.display = 'block';
+                this.$refs.resultSpan.style.color = 'rgb(34, 159, 0)';
                
             } else {
                 var x = 0;
